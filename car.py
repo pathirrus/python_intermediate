@@ -1,4 +1,4 @@
-from sda_exercises_oop_1.movable import Movable
+from python_intermediate.movable import Movable
 
 
 class Car(Movable):

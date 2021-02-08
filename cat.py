@@ -1,5 +1,5 @@
-from sda_exercises_oop_1.animal import Animals
-from sda_exercises_oop_1.movable import Movable
+from python_intermediate.animal import Animals
+from python_intermediate.movable import Movable
 
 
 class Cat(Movable, Animals):

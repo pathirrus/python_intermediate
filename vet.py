@@ -1,6 +1,6 @@
-from sda_exercises_oop_1.cat import Cat
-from sda_exercises_oop_1.dog import Dog
-from sda_exercises_oop_1.animal import Animals
+from python_intermediate.animal import Animals
+from python_intermediate.cat import Cat
+from python_intermediate.dog import Dog
 
 
 class Vet:
