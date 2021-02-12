@@ -1,4 +1,4 @@
-from python_intermediate.animal import Animals
+from python_intermediate.sda_exercises_oop1.animal import Animals
 
 
 class Dog(Animals):
