@@ -1,3 +1,6 @@
+from python_intermediate_repo.python_intermediate.generators.exercise_3 import Iterable
+
+
 def iterator_ex_1():
     dictionary = {
         'a': 1,
@@ -29,9 +32,23 @@ def iterator_ex_2(n):
     print(result)
 
 
+def iterator_ex_3(n):
+    print("Start exercise 3")
+    import sys
+    my_iterator = Iterable(n)
+    print(f'Size of iterator in bytes: {sys.getsizeof(my_iterator)}')
+    result = sum(my_iterator)
+    print((f'Size of one number in bytes: {sys.getsizeof(result)}'))
+    print(result)
+
+
 def main():
     # iterator_ex_1()
+    print("Exercise 2")
     iterator_ex_2(100000)
+    print("Exercise 3")
+    iterator_ex_3(100000)
+
 
 if __name__ == "__main__":
     main()
