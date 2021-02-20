@@ -12,23 +12,23 @@ class Human:
         return f'Human -> name: {self.name}, surname: {self.surname}, age: {self.age}'
 
     def convert_to_dict(self) -> dict:
-        return self.__dict__
+        return self.__dict__            #zwraca klucz i wartosć naszego obiektu, łatwo z niego robis pliki json
 
     @classmethod
     def convert_from_dict(cls, params: dict):
         name = params.get('name', '-')
         surname = params.get('surname', '-')
         age = params.get('age', 0)
-        return cls(name, surname, age)
+        return cls(name, surname, age)          #to samo jakby było 'return Human'
 
 
 def write_humans_to_file(humans: list):
     human_serialized = []
 
     for human in humans:
-        human_str: dict = human.convert_to_dict()
-        human_json: str = json.dumps(human_str)
-        human_serialized.append(human_json)
+        human_dict: dict = human.convert_to_dict()       #zamieniamy nawsz obiekt na dict
+        human_json: str = json.dumps(human_dict)         #zamiana dict na json
+        human_serialized.append(human_json)              #dodanie elemetów do listy
 
     try:
         with open('./humans.json', 'w') as fd:
@@ -45,7 +45,7 @@ def read_humans_from_file() -> list:
             humans_serialized: list = json.load(fd)
     except (IOError, BaseException) as e:
         print(f'Problem with writing to file, info : {e.args}')
-        return []
+
 
     humans = []
     for human_str in humans_serialized:
@@ -53,7 +53,7 @@ def read_humans_from_file() -> list:
         human = Human.convert_from_dict(human_json)
         humans.append(human)
 
-    return humans_serialized
+    return humans
 
 
 

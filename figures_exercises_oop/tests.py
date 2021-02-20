@@ -13,7 +13,7 @@ def test_check_area():
     # rectangle2 = Rectangle(4, 6)
 
     #  when
-    result = Figure.count_area([circle, triangle, rectangle])
+    result = Figre.count_area([circle, triangle, rectangle])
 
     #  then
     assert result == 8.142

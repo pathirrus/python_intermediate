@@ -1,4 +1,4 @@
-from python_intermediate.serializes.pickle import pickle_write
+from python_intermediate_repo.python_intermediate.serializes.pickle import pickle_write
 
 
 def main():

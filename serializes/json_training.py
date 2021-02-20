@@ -3,7 +3,7 @@ import json
 
 def json_write(warrior_list):
     try:
-        with open("warriors.json", 'w') as out_file:
+        with open("./warriors.json", 'w') as out_file:
             json.dump(warrior_list, out_file, indent=2)
 
     except (IOError, Exception) as e:
@@ -11,6 +11,7 @@ def json_write(warrior_list):
 
 
 def json_read():
+
     try:
         with open('./warriors.json', 'r') as fd:
             data = json.load(fd)
