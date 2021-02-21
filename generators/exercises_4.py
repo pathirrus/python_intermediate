@@ -17,3 +17,8 @@ def generator_ex_4():
         for part_line in lazy_read_generator(fd):
             print(part_line)
             sleep(1)
+
+
+def reader_line_by_line():
+    for line in open("./file_to_read.txt"):
+        yield line
