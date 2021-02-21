@@ -1,4 +1,5 @@
 from python_intermediate_repo.python_intermediate.generators.exercise_3 import Iterable
+from python_intermediate_repo.python_intermediate.generators.exercises_4 import generator_ex_4
 
 
 def iterator_ex_1():
@@ -43,12 +44,12 @@ def iterator_ex_3(n):
 
 
 def main():
-    # iterator_ex_1()
-    print("Exercise 2")
-    iterator_ex_2(100000)
-    print("Exercise 3")
-    iterator_ex_3(100000)
-
+    # # iterator_ex_1()
+    # print("Exercise 2")
+    # iterator_ex_2(100000)
+    # print("Exercise 3")
+    # iterator_ex_3(100000)
+    generator_ex_4()
 
 if __name__ == "__main__":
     main()

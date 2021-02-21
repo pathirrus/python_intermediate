@@ -8,7 +8,7 @@ class Iterable:
         return self
 
     def __next__(self):
-        if self.created_value >= self.amount - 1:
+        if self.created_value >= self.amount-1 :
             raise StopIteration
         self.created_value += 1
         return self.created_value
