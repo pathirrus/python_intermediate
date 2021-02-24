@@ -26,3 +26,18 @@ def exercises_2():
 
     else:
         print(("Incorrect post code"))
+
+
+def exercises_3():
+    print("Write your login:")
+    check_login = input()
+    expression = "[\w]{8,16}"
+    if re.fullmatch(expression, check_login):
+        print("Login is correct")
+
+
+    else:
+        print(("Login is NOT correct"))
+
+
+
