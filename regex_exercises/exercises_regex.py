@@ -31,7 +31,7 @@ def exercises_2():
 def exercises_3():
     print("Write your login:")
     check_login = input()
-    expression = "[\w]{8,16}"
+    expression = "[\w_]{8,16}"
     if re.fullmatch(expression, check_login):
         print("Login is correct")
 
@@ -40,4 +40,24 @@ def exercises_3():
         print(("Login is NOT correct"))
 
 
+def exercises_4():
+    print("enter any string of characters:")
+    value = input()
 
+    expression = ".*ala.*"
+    if re.match(expression, value):
+        print("found ala")
+    else:
+        print("ala not found")
+
+
+
+def exercises_7():
+    print("Enter serial number:")
+    value = input()
+
+    expression = r'([A-Z0-9!@#\$%\^&\*]{5}-){4}[A-Z0-9!@#\$%\^&\*]{5}'
+    if re.fullmatch(expression, value):
+        print("Serial number is correct")
+    else:
+        print("Serial number is incorretct")
